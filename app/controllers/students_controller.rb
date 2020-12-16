@@ -1,9 +1,10 @@
 class StudentsController < ApplicationController
-  before_action :find_student, only: %i[edit update destroy]
+  before_action :find_student, only: %i[edit update destroy show]
   before_action :build_student, only: %i[new create]
 
   def index
     @students = Student.all
+
   end
 
   def new; end

@@ -1,0 +1,42 @@
+<div class="container">
+	<table>
+	<td>
+	<th>
+	<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+  	<div class="card-header">Student</div>
+  		<div class="card-body">
+    		<h5 class="card-title">All Students</h5>
+    		<p class="card-text"><%= Student.count%></p>
+  		</div>
+	</div>
+	</th>
+	<th>
+	<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+  	<div class="card-header">Student</div>
+  		<div class="card-body">
+    		<h5 class="card-title">No of Girls</h5>
+    		<p class="card-text"><%= Student.where(gender: 'Female').count%></p>
+  		</div>
+	</div>
+	</th>
+	<th>
+	<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+  	<div class="card-header">Student</div>
+  		<div class="card-body">
+    		<h5 class="card-title">No of Boys</h5>
+    		<p class="card-text"><%= Student.where(gender: 'Male').count%></p>
+  		</div>
+	</div>
+	</th>
+	<th>
+	<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+  	<div class="card-header">Student</div>
+  		<div class="card-body">
+    		<h5 class="card-title">Active Students</h5>
+    		<p class="card-text"><%= Student.where(is_active: 'true').count%></p>
+  		</div>
+	</div>
+	</th>
+	</td>
+</table>
+</div>
