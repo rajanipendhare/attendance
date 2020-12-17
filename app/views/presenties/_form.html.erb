@@ -1,0 +1,7 @@
+<div class="container">
+  <%=form_for @presenty do |f|%><br>
+    Student:- <%=f.select :student_id, Student.all.collect{|student| [student.first_name, student.id]} %><br>
+    Status :- <%=f.check_box :status %><br><br>
+    <%=f.submit class: "btn btn-primary mb-2"%><br><br>
+  <%end%>
+</div>
