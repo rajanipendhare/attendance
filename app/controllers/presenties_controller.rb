@@ -1,6 +1,6 @@
 class PresentiesController < ApplicationController
   before_action :find_presenty, only: %i[edit update destroy]
-  before_action :build_presenty, only: %i[new create]
+  before_action :build_presenty, only: %i[new create find_by_date]
 
   def index
     @presenties = Presenty.all
@@ -12,6 +12,13 @@ class PresentiesController < ApplicationController
   end
 
   def edit; end
+
+  def find_by_date; end
+
+  def presenty_by_date
+    created_at = params[:presenty][:created_at]
+    @presenties = Presenty.where("Date(created_at) = ?", created_at)
+  end
 
   def show; end
 

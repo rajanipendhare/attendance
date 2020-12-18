@@ -1,0 +1,40 @@
+<div class="container">
+  <table class = "table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Total</th>
+        <th>Present</th>
+        <th>Absent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <td><%= @presenties.count %></td>
+      <td><%= @presenties.where(status: true).count %></td>
+      <td><%= @presenties.where(status: false).count %></td>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="container">
+  <table class = "table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Created At</th>
+        <th>Student</th>
+        <th>Status</th>
+        <th colspan="2"><%=link_to "Show", presenties_find_by_date_path%></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @presenties.each do |presenty|%>
+        <tr>
+          <td><%= presenty.created_at.strftime '%d/%b/%Y' %></td>
+          <td><%= presenty.student.first_name + " " + presenty.student.last_name %></td>
+          <td><%= presenty.status%></td>
+          <td><%=link_to "Edit", edit_presenty_path(presenty)%></td>
+          <td><%= link_to 'Delete', presenty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>

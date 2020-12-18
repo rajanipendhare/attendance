@@ -1,0 +1,6 @@
+<div class="container">
+  <%= form_for :presenty, url: presenties_presenty_by_date_path, method: :get do |f| %>
+		Created at :- <%=f.date_field :created_at%>
+		<%=f.submit class: "btn btn-primary mb-2"%>
+	<%end%>
+</div>
