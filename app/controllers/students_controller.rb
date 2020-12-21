@@ -4,8 +4,11 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
-
   end
+  
+  def myinfo; end
+
+  def fees; end
 
   def new; end
 

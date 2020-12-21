@@ -8,38 +8,35 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <br>
     <div class="container">
-  <nav class="navbar navbar-light" style="background-color: #e3ffdd;">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item">
-        <%=link_to "Home", root_path%>
-      </li>
-      <li class="nav-item">
-        <%=link_to "Student" , students_path%>
-      </li>
-      <li class="nav-item">
-        <%=link_to "Presenty", new_presenty_path%>
-      <li class="nav-item">
-        <a class="nav-link" id="pills-gallery-tab" data-toggle="pill" href="#pills-gallery" role="tab" aria-controls="pills-gallery" aria-selected="false">Gallery</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="pills-exam-tab" data-toggle="pill" href="#pills-exam" role="tab" aria-controls="pills-exam" aria-selected="false">Exam Results</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-controls="pills-about" aria-selected="false">About Us</a>
-      </li>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-      <div class="tab-pane fade" id="pills-student" role="tabpanel" aria-labelledby="pills-student-tab">...</div>
-      <div class="tab-pane fade" id="pills-exam" role="tabpanel" aria-labelledby="pills-exam-tab">...</div>
-      <div class="tab-pane fade" id="pills-attendance" role="tabpanel" aria-labelledby="pills-attendance-tab">...</div>
-      <div class="tab-pane fade" id="pills-show" role="tabpanel" aria-labelledby="pills-show-tab">...</div>
+      <nav class="navbar navbar-light" style="background-color: #ffddee">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" style="padding-left:5em">
+            <%=link_to "Home", root_path%>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+            <%=link_to "Student" , students_path%>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+            <%=link_to "Presenty", new_presenty_path%>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+            <%=link_to "Gallery"%>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+            <%=link_to "Exam Results"%>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+            <%=link_to "Fee Structure", students_fees_path%>
+          </li>
+          <li class="nav-item" style="padding-left:3em">
+            <%=link_to "About US", students_myinfo_path%>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </nav>
-</div>
     <%= yield %>
   </body>
 </html>
